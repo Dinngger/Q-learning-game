@@ -51,6 +51,12 @@ namespace Q_learning
             mybot.NextS(2);
             LabelPaint();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            mybot.Clear();
+            LabelPaint();
+        }
     }
 
     public class Bot
@@ -90,6 +96,13 @@ namespace Q_learning
                 return 3;
             else
                 return 1;
+        }
+
+        public void Clear()
+        {
+            win = 0;
+            lose = 0;
+            even = 0;
         }
 
         private void Init()
